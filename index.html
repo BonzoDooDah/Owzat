@@ -10,19 +10,26 @@
 
 <body onload="init()">
     <header>page_header</header>
-    <nav>command_bar</nav>
+    <nav>
+        <button type="button" id="buttonStartMatch">Start Match</button>
+        <button type="button" id="buttonBowlBall">Bowl Ball</button>
+        <button type="button" id="buttonBowlOver">Bowl Over</button>
+        <button type="button" id="buttonChangeBowler">Change Bowler</button>
+    </nav>
     <main>
-        <section id="elemIdHomeTeam">home_team</section>
-        <section id="elemIdAwayTeam">away_team</section>
+        <section id="elemIdHomeTeam"><div>Home Team</div></section>
+        <section id="elemIdAwayTeam"><div>Away Team</div></section>
         <section id="elemIdMatch">
-            <article id="elemIdMatchSummary">match_summary</article>
-            <article id="elemIdInnings1">innings_1_1</article>
-            <article id="elemIdInnings2">innings_1_2</article>
-            <article id="elemIdInnings3">innings_2_1</article>
-            <article id="elemIdInnings4">innings_2_2</article>
+            <article id="elemIdMatchSummary"><div>Match Summary</div></article>
+            <article id="elemIdInnings1"><div>1st Innings</div></article>
+            <article id="elemIdInnings2"><div>1st Innings</div></article>
+            <article id="elemIdInnings3"><div>2nd Innings</div></article>
+            <article id="elemIdInnings4"><div>2nd Innings</div></article>
         </section>
     </main>
     <footer>page_footer</footer>
+    <script src="src/team.js"></script>
+    <script src="src/match.js"></script>
     <script src="src/owzat.js"></script>
 </body>
 

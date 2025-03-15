@@ -1,3 +1,7 @@
+:root {
+    --var-colour-table-header: #eeeeee;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -5,7 +9,80 @@
 html,
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: medium;
+    font-size: small;
     font-weight: normal;
     text-align: center;
+}
+
+table {
+    display: inline-table;
+    font-family: 'Courier New', Courier, monospace;
+    border-spacing: 0;
+    margin: 0.5em 1em;
+}
+
+td:first-child {
+    text-align: left;
+    width: 20em;
+}
+
+td {
+    padding: 0.2em 0.5em;
+    width: 6em;
+    border-bottom: 1px solid rgb(196, 196, 196);
+}
+
+thead td {
+    font-weight: bold;
+    background-color: rgb(223, 255, 32);
+    border-top: 1px solid rgb(0, 0, 0);
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+nav {
+    padding-top: 0.5em;
+    padding-bottom: 0;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+button {
+    font: inherit;
+}
+
+section,
+article {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    display: inline-block;
+    vertical-align: top;
+}
+
+section:last-child {
+    display: block;
+}
+
+main div:first-child {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+
+    background-color: rgb(196, 196, 196);
+}
+
+article td.text {
+    width: 15em;
+    text-align: left;
+}
+
+article td.number {
+    width: 5em;
+    text-align: center;
+}
+
+article td.wk {
+    color: rgb(196, 196, 196);
 }

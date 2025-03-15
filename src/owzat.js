@@ -26,8 +26,8 @@ const dBplayers = [
 
 // test array of team data
 const dBteams = [
-    { name: 'England', nation: 'ENG', orderBat: [5, 6, 15, 16, 2, 19, 7, 9, 20, 0, 3], orderBowl: [0, 3], wicketkeeper: 7 },
-    { name: 'India', nation: 'IND', orderBat: [17, 11, 8, 14, 10, 13, 12, 1, 21, 18, 4], orderBowl: [4, 18], wicketkeeper: 12 }
+    { name: 'England', nation: 'ENG', orderBat: [5, 6, 15, 16, 2, 19, 7, 9, 20, 0, 3], orderBowl: [9, 10], wicketKeeper: 6 },
+    { name: 'India', nation: 'IND', orderBat: [17, 11, 8, 14, 10, 13, 12, 1, 21, 18, 4], orderBowl: [10, 9], wicketKeeper: 6 }
 ]
 
 // function to get a random number between 0 and (max-1)
@@ -35,8 +35,47 @@ function BfxRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
 
+// function to return a dice roll
+function BfxRollDice(sides = 6) {
+    return (Math.floor(Math.random() * sides) + 1);
+}
+
+// function to get a random true or false
+function BfxRandomBool() {
+    return Boolean(Math.floor(Math.random() * 2));
+}
+
+console.clear;
+let match = null;
+let btnStartMatch = document.getElementById('buttonStartMatch');
+btnStartMatch.onclick = startMatch;
+let btnBowlBall = document.getElementById('buttonBowlBall');
+btnBowlBall.onclick = test;
+btnBowlBall.style = 'display: none;';
+let btnBowlOver = document.getElementById('buttonBowlOver');
+btnBowlOver.onclick = test;
+btnBowlOver.style = 'display: none;';
+let btnChangeBowler = document.getElementById('buttonChangeBowler');
+btnChangeBowler.onclick = test;
+btnChangeBowler.style = 'display: none;';
+
 function init() {
-    console.log(dBplayers, dBteams);
     // load teams
+    match = new CMatch(0, dBteams[0], dBteams[1]);
+    console.log(match);
     // initialise match
+}
+
+function test() {
+    alert('test');
+}
+
+function startMatch() {
+    // @ts-ignore
+    btnStartMatch.style = 'display: none;';
+    btnBowlBall.style = 'display: unset;'
+    btnBowlOver.style = 'display: unset;'
+    btnChangeBowler.style = 'display: unset;'
+
+    document.getElementById('elemIdInnings1').style.display = 'inline-block';
 }
